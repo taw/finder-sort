@@ -10,7 +10,7 @@ test("sorting in Finder order, returns new sorted array", t => {
 
 test("sorting numbers", t => {
   let data = [];
-  for(let i=0; i<=1000; i++) {
+  for (let i=0; i<=1000; i++) {
     data.push(`x${i}.txt`);
   }
   t.deepEqual(data, finderSort(data));
