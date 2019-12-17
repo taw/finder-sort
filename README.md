@@ -15,3 +15,12 @@ So `cat9.jpg` comes before `cat10.jpg`, it's case insensitive except as tie-brea
 
     finderSort(arrayOfFiles);
 ```
+
+For more complex scenacios, you can pass key function as second argument.
+For example if you want to sort array of objects by their `fileName` property, you can do:
+
+```
+    import finderSort from "finder-sort";
+
+    finderSort(arrayOfObjects, (obj) => obj.fileName);
+```

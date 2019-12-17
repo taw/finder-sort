@@ -36,8 +36,12 @@ let finder_key = (str) => (
   force_numbers_into_order(str).split("/")
 )
 
-let finder_sort = (paths) => (
-  sort_by(paths, finder_key)
-)
+let finder_sort = (data, key_func) => {
+  if (key_func) {
+    return sort_by(data, (x) => finder_key(key_func(x)))
+  } else {
+    return sort_by(data, finder_key)
+  }
+}
 
 module.exports = finder_sort;

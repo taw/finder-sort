@@ -30,3 +30,17 @@ test("sorting multi-part paths", t => {
   ];
   t.deepEqual(data, finderSort(data));
 })
+
+test('sorting objects with name key', (t) => {
+	let data = [
+		{ name: 'cat1.jpg', color: 'white' },
+		{ name: 'cat11.jpg', color: 'brown' },
+		{ name: 'cat9.jpg', color: 'pink' },
+	];
+  let expected = [
+		{ name: 'cat1.jpg', color: 'white' },
+		{ name: 'cat9.jpg', color: 'pink' },
+		{ name: 'cat11.jpg', color: 'brown' },
+  ];
+	t.deepEqual(expected, finderSort(data, (x) => x.name));
+});
