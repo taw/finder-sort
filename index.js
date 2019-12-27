@@ -32,8 +32,23 @@ let force_numbers_into_order = (str) => (
   str.replace(/\d+/g, pad_with_nines)
 )
 
+let separate_extensions = (ary) => {
+  let result = [];
+  for (part of ary) {
+    let i = part.indexOf(".");
+    if (i === -1) {
+      result.push(part);
+      result.push("");
+    } else {
+      result.push(part.substr(0, i));
+      result.push(part.substr(i));
+    }
+  }
+  return result;
+}
+
 let finder_key = (str) => (
-  force_numbers_into_order(str).split("/")
+  separate_extensions(force_numbers_into_order(str).split("/"))
 )
 
 let finder_sort = (data, key_func) => {

@@ -44,3 +44,9 @@ test('sorting objects with name key', (t) => {
   ];
 	t.deepEqual(expected, finderSort(data, (x) => x.name));
 });
+
+test('extension is compared separately from basename', (t) => {
+  let data = Object.freeze(["foo.png", "foo_bar.png", "foo.jpg", "foo_bar.jpg"]);
+  let sorted = ["foo.jpg", "foo.png", "foo_bar.jpg", "foo_bar.png"];
+	t.deepEqual(sorted, finderSort(data));
+});

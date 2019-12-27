@@ -1,6 +1,6 @@
 {
   "name": "finder-sort",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Sort file names in order meaningful for humans (inspired by OSX Finder)",
   "main": "index.js",
   "scripts": {
