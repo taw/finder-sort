@@ -34,7 +34,7 @@ let force_numbers_into_order = (str) => (
 
 let separate_extensions = (ary) => {
   let result = [];
-  for (part of ary) {
+  for (let part of ary) {
     let i = part.indexOf(".");
     if (i === -1) {
       result.push(part);
