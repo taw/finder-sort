@@ -3,8 +3,13 @@
   "version": "0.3.2",
   "description": "Sort file names in order meaningful for humans (inspired by OSX Finder)",
   "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
   "scripts": {
-    "test": "ava"
+    "test": "ava && tsd"
   },
   "repository": {
     "type": "git",
@@ -21,6 +26,7 @@
   },
   "homepage": "https://github.com/taw/finder-sort#readme",
   "devDependencies": {
-    "ava": "^1.0.1"
+    "ava": "^1.0.1",
+    "tsd": "^0.26.1"
   }
 }
